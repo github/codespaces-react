@@ -1,0 +1,13 @@
+{
+    "extensions": [
+        "gh-gh-dogfooding.codespaces-zero"
+    ],
+    "codespaces": {
+      "zero": {
+        "defaultFile": "src/App.js",
+        "startCommand": "npm start",
+        "previewPort": 3000,
+        "previewDelay:": 6000
+      }
+    }
+  }
