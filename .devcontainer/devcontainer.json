@@ -2,10 +2,6 @@
     "extensions": [
         "gh-gh-dogfooding.codespaces-zero"
     ],
-    "hostRequirements": {
-      "storage": "32gb",
-      "memory": "8gb"
-    },
     "codespaces": {
       "zero": {
         "defaultFile": "src/App.js",
