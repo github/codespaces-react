@@ -3,6 +3,7 @@
         "gh-gh-dogfooding.codespaces-zero"
     ],
     "onCreateCommand": "npm install && npm run build",
+    "postCreateCommand": "",
     "hostRequirements": {
         "cpus": 8,
         "memory": "16gb",
