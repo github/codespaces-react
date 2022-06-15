@@ -2,6 +2,7 @@
     "extensions": [
         "gh-gh-dogfooding.codespaces-zero"
     ],
+    "onCreateCommand": "npm install",
     "codespaces": {
       "zero": {
         "defaultFile": "src/App.js",
