@@ -3,6 +3,11 @@
         "gh-gh-dogfooding.codespaces-zero"
     ],
     "onCreateCommand": "npm install && npm run build",
+    "hostRequirements": {
+        "cpus": 8,
+        "memory": "16gb",
+        "storage": "32gb"
+    },
     "codespaces": {
       "zero": {
         "defaultFile": "src/App.js",
