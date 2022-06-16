@@ -14,7 +14,7 @@
         "defaultFile": "src/App.js",
         "startCommand": "npm start",
         "previewPort": 3000,
-        "previewDelay:": 6000
+        "previewDelay": 7000
       }
     }
   }
