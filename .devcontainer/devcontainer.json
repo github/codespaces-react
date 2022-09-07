@@ -1,17 +1,4 @@
 {
     "onCreateCommand": "npm install && npm run build",
-    "postCreateCommand": "",
-    "hostRequirements": {
-        "cpus": 4,
-        "memory": "8gb",
-        "storage": "32gb"
-    },
-    "codespaces": {
-      "zero": {
-        "defaultFile": "src/App.js",
-        "startCommand": "npm start",
-        "previewPort": 3000,
-        "previewDelay": 7000
-      }
-    }
+    "postCreateCommand": ""
   }
