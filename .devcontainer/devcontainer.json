@@ -1,4 +1,20 @@
 {
+    "postAttachCommand": {
+      "server": "npm start"
+    },
+
+    "portsAttributes": {
+      "3000": {
+        "label": "Application",
+        "onAutoForward": "openPreview"
+      }
+    },
+
+    "customizations": {
+      "codespaces": {
+        "openFiles": ["src/App.js"]
+      }
+    },
     "onCreateCommand": "npm install && npm run build",
     "postCreateCommand": ""
   }
