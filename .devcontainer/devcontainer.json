@@ -1,5 +1,7 @@
 {
-    "postAttachCommand": "npm start",
+    "postAttachCommand": {
+      "server": "npm start",
+    },
 
     "portsAttributes": {
       "3000": {
