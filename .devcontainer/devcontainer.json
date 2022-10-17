@@ -16,5 +16,6 @@
       }
     },
     "onCreateCommand": "npm install && npm run build",
-    "postCreateCommand": ""
+    "postCreateCommand": "",
+    "hostRequirements": {"cpus": 4}
   }
