@@ -1,4 +1,15 @@
 {
+    "hostRequirements": {"cpus": 4},
+        
+    "onCreateCommand": "npm install && npm run build",
+    "postCreateCommand": "",
+    
+    "customizations": {
+      "codespaces": {
+        "openFiles": ["src/App.js"]
+      }
+    },
+          
     "postAttachCommand": {
       "server": "npm start",
     },
@@ -8,14 +19,5 @@
         "label": "Application",
         "onAutoForward": "openPreview"
       }
-    },
-
-    "customizations": {
-      "codespaces": {
-        "openFiles": ["src/App.js"]
-      }
-    },
-    "onCreateCommand": "npm install && npm run build",
-    "postCreateCommand": "",
-    "hostRequirements": {"cpus": 4}
+    }
   }
