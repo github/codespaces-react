@@ -6,9 +6,9 @@ function App() {
       <header className="App-header">
         <img src="Octocat.png" className="App-logo" alt="logo" />
         <p>
-          GitHub Codespaces <span class="heart">♥️</span> React
+          GitHub Codespaces <span className="heart">♥️</span> React
         </p>
-        <p class="small">
+        <p className="small">
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <p>
