@@ -1,0 +1,26 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Navigate your first Codespace",
+  "steps": [
+    {
+      "file": "App.js",
+      "line": 2,
+      "description": "Hey! 👋 You've opened your first GitHub Codespaces template. This template is written in React. To get familiar with the code, we'll ask you to edit it! But don't worry, we'll give you directions each step of the way\n\nClick the `Next` link below to keep learning 👇"
+    },
+    {
+      "file": "App.js",
+      "line": 9,
+      "description": "Our app says GitHub Codespaces loves React, but we know you love React, too! Update 9 line where it says `<p> GitHub Codespaces <span className='heart'>♥️</span> React </p>` to say `<p> @Your_username_here <span className='heart'>♥️</span> React </p>`!\n\nSave your changes and then click `Next` to move forward. ⬇️" 
+    },
+    {
+      "file": "App.css",
+      "line": 11,
+      "description": "Great job at updating the words on your web app. Now let's update the background colors for this app. On line 11, the color is current `#282c34`, which is the color code for dark grey. Let's update it to `purple`. \n\nDon't forget to press save and check your updated changes in the browser! 💜"
+    },
+    {
+      "file": "App.js",
+      "line": 27,
+      "description": "Mission complete! You added code to you first GitHub Codespace. Feel free to continue expirementing!"
+    }
+  ]
+}

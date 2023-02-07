@@ -10,6 +10,9 @@
     "server": "npm start"
   },
   "customizations": {
+    "extensions": [
+        "vsls-contrib.codetour"
+    ],
     "codespaces": {
       "openFiles": [
         "src/App.js"
@@ -24,3 +27,4 @@
   },
   "forwardPorts": [3000]
 }
+
