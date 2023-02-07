@@ -48,7 +48,6 @@ typings/
 *.tsbuildinfo
 
 # Optional npm cache directory
-.npm
 
 # Optional eslint cache
 .eslintcache
@@ -69,14 +68,12 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
 .env.test
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
 # Next.js build output
-.next
 
 # Nuxt.js build / generate output
 .nuxt
@@ -105,7 +102,6 @@ dist
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
 /.pnp
 .pnp.js
 
