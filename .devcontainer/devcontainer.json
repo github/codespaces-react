@@ -10,14 +10,16 @@
     "server": "npm start"
   },
   "customizations": {
-    "extensions": [
-        "vsls-contrib.codetour"
-    ],
     "codespaces": {
       "openFiles": [
         "src/App.js"
       ]
-    }
+	},
+	"vscode": {
+		"extensions": [
+			"vsls-contrib.codetour"
+		]
+	}
   },
   "portsAttributes": {
     "3000": {
