@@ -13,7 +13,7 @@
         "start"
       ],
       "skipFiles": [
-        "<node_internals>/**"
+        "<node_externals>/**"
       ]
     }
   ]
