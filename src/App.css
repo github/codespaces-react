@@ -29,3 +29,9 @@
 .small {
   font-size: 0.75rem;
 }
+
+.hello-world {
+  color: #ffffff;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
