@@ -11,6 +11,10 @@
     "react-scripts": "^5.0.1",
     "web-vitals": "^3.1.0"
   },
+  "overrides": {
+    "@svgr/webpack": "^8.0.1",
+    "@adobe/css-tools": "^4.3.1"
+  },
   "scripts": {
     "start": "BROWSER=none WDS_SOCKET_PORT=0 react-scripts start",
     "build": "react-scripts build",
