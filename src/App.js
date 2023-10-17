@@ -1,5 +1,12 @@
 import './App.css';
 
+console.log("prueba")
+console.log("hola ")
+
+console.log("prueba 5")
+console.log("prueba 67")
+
+
 function App() {
   return (
     <div className="App">
