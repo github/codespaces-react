@@ -5,6 +5,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src="Octocat.png" className="App-logo" alt="logo" />
+        <h1>ALGATE FIRE PROJECT</h1>
         <p>
           GitHub Codespaces <span className="heart">♥️</span> React
         </p>
