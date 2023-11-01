@@ -11,7 +11,7 @@
     "cpus": 4
   },
 
-  // Upon Codespaces or image prebuild, refresh the npm and node.hs installation (async from environment creation)
+  // Upon codespaces or image prebuild, refresh the npm and node.js installation (async from environment creation)
   "updateContentCommand": "npm install",
 
   // Upon environment create, and after the user session is created, run the server
