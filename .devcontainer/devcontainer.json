@@ -20,7 +20,7 @@
   },
 
   "customizations": {
-    // Configure Codespaces to open the application source on start
+    // Configure codespaces to open the application source on start
     "codespaces": {
       "openFiles": [
         "src/App.js"
