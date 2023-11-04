@@ -1,13 +1,27 @@
+/* resets default browser styles */
+body,h1,p {
+   margin:0;
+   padding: 0;
+  }
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:
+  Ariel,  
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans', 
+    'Droid Sans', 
+ 
     sans-serif;
+    background-color: #0c0000;
+    color: #fff;
+    /* remove webkit when not required */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
