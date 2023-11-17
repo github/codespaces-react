@@ -6,13 +6,13 @@
   height: 10vmin;
   pointer-events: none;
 }
-.App-logo-video {
+/* .App-logo-video {
   height: 10vmin;
   pointer-events: none;
-}
+} */
 /* header styles*/
 .App-header { 
-  background-color: #7597db;
+  background-color: #cdd0d5;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,8 +21,14 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.crumb {
+  display: inline-block;
+  margin: 20px;
+  padding: 0 20px 0 20px;
+ 
+}
 .container {
-  background-color: #7597db;
+  background-color: #db9575;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
