@@ -6,10 +6,10 @@
   height: 10vmin;
   pointer-events: none;
 }
-/* .App-logo-video {
+.App-logo-video {
   height: 10vmin;
   pointer-events: none;
-} */
+}
 /* header styles*/
 .App-header { 
   background-color: #cdd0d5;
