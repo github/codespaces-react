@@ -1,7 +1,9 @@
 import './App.css';
 // import video from "./videos";
-import textCreator from './components/loremIpsum';
 
+// eslint-disable-next-line no-unused-vars
+import LoremComponent from './components/loremIpsum';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -27,7 +29,8 @@ function App() {
           </ul>
         </nav>
         <p>
-          <a
+        <LoremComponent />
+          <a>
             className="App-link"
             href="https://reactjs.org"
             target="_blank"
@@ -42,7 +45,7 @@ function App() {
       <div className="container">
         <section>
           <h1>next section</h1>
-          <textCreator />
+          <LoremComponent />
         </section>
 
         <section>
@@ -62,16 +65,11 @@ function App() {
           <button >SUBMIT</button>
           </form>
         </section>
-        <footer className="crumbs">
-        <li className="crumb"><a href="videos/Algate.mp4">Twitter</a></li>
-            <li className="crumb"><a href="videos/Algate.mp4">Facebook</a></li>
-            <li className="crumb"><a href="videos/Algate.mp4">Tinder</a></li>
-        <h3>Copycat 2023</h3>
-        </footer>
+        <Footer />
       </div>     
       {/* container ends */}
       </div>
   );
-}
+};
 
 export default App;
