@@ -1,21 +1,34 @@
 {
+  // See the devcontainer spec at https://containers.dev/implementors/spec/
+  "name": "React Codespaces Template",
+
+  // Container image to build environment from
+  // universal contains many tools making it useful in many contexts https://github.com/devcontainers/images/tree/main/src/universal
   "image": "mcr.microsoft.com/devcontainers/universal:2",
+
+  // Specify the minimum machine spec for running the dev container
   "hostRequirements": {
     "cpus": 4
   },
-  "waitFor": "onCreateCommand",
+
+  // Upon codespaces or image prebuild, refresh the npm and node.js installation (async from environment creation)
   "updateContentCommand": "npm install",
-  "postCreateCommand": "",
+
+  // Upon environment create, and after the user session is created, run the server
   "postAttachCommand": {
     "server": "npm start"
   },
+
   "customizations": {
+    // Configure codespaces to open the application source on start
     "codespaces": {
       "openFiles": [
         "src/App.js"
       ]
     }
   },
+
+  // Configure the environment to open a browser to the application on port 3000
   "portsAttributes": {
     "3000": {
       "label": "Application",
