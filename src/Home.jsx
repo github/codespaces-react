@@ -1,7 +1,12 @@
 import styled from 'styled-components';
-
+import { useEffect } from 'react';
 
 const Home = () => {
+  
+  useEffect(() => {
+    document.cookie = 'has_visited_before=true; path=/';
+  }, [])
+
   return (
     <>
      <HeroDiv>
@@ -17,6 +22,8 @@ const Home = () => {
   );
 }
 
+//Sizing is screwed below 307px, potentially add this parameter to the media styled component
+
 const Logo = styled.img`
   width: 160px;
   padding-top: 50px;
@@ -25,6 +32,22 @@ const Logo = styled.img`
   top: 0;
   left: 0;
   z-index: 1;
+
+  @media (max-width: 991px) {
+    padding-left: 80px;
+  }
+
+  @media (max-width: 750px) {
+    padding-left: 40px;
+    padding-top: 40px;
+  }
+
+  @media (max-width: 500px) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  
 `;
 
 // create a component that displays video-hero.mp4 on loop
@@ -53,6 +76,18 @@ const Overlay = styled.div`
   width: 100%;
   height: 100%; 
   background: rgba(0, 47, 108, 0.8);
+
+  @media (max-width: 991px) {
+    height: 100vh;
+  }
+
+  @media (max-width: 750px) {
+    height: 100vh;
+  }
+
+  @media (max-width: 500px) {
+    height: 100vh;
+  }
 `;
 
 const BFAMBio = () => {
@@ -72,6 +107,24 @@ const Wrapper = styled.div`
   bottom: 0;
   left: 0;
   padding-bottom: 100px;
+
+  @media (max-width: 991px) {
+  padding-bottom: 80px;
+  }
+  @media (max-width: 750px) {
+  padding-bottom: 60px;
+  }
+  @media (max-width: 500px) {
+    left: 50%;
+    top: 64%;
+    transform: translate(-50%, -50%);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+    width: 90%;
+
+  }
 `;
 
 const StyledParagraph = styled.p`
@@ -79,7 +132,6 @@ const StyledParagraph = styled.p`
   position: relative;
   padding-left: 130px;
   padding-right: 130px;
-  max-width: 50%;
   
   top: 0;
   font-family: "Poppins", sans-serif;
@@ -88,6 +140,31 @@ const StyledParagraph = styled.p`
   font-size: 24px;
   line-height: 36px;
   margin-bottom: 25px;
+
+  @media (max-width: 991px) {
+    font-size: 24px;
+    padding-left: 80px;
+    padding-right: 80px;
+    line-height: 28px;
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: 750px) {
+    font-size: 20px;
+    padding-left: 60px;
+    padding-right: 40px;
+    line-height: 28px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 5px;
+    align-self: center;
+    padding: 0px;
+    text-align: center;
+  }
 `;
 
 const StyledHeader = styled.h1`
@@ -105,6 +182,28 @@ const StyledHeader = styled.h1`
   line-height: 56px;
   margin-bottom: 25px;
   text-transform: uppercase;
+
+  @media (max-width: 991px) {
+    margin-bottom: 16px;
+    font-size: 64px;
+    padding-left: 80px;
+    padding-right: 0px;
+    
+  }
+
+  @media (max-width: 750px) {
+    margin-bottom: 6px;
+    font-size: 54px;
+    padding-left: 60px;
+  }
+
+  @media (max-width: 500px) {
+    padding: 0px;
+    margin-bottom: 20px;
+    font-size: 46px;
+    align-self: center;
+    text-align: center;
+  }
 `;
 
 
@@ -114,6 +213,18 @@ const HeroDiv = styled.div`
   height: 100vh;
   background-color: white;
   max-width: 100%;
+
+  @media (max-width: 991px) {
+    height: 100vh;
+  }
+
+  @media (max-width: 750px) {
+    height: 100vh;
+  }
+
+  @media (max-width: 500px) {
+    height: 100vh;
+  }
 `;
 
 const ContactInfo = () => {
@@ -132,8 +243,7 @@ const ContactInfo = () => {
 }
 
 const ContactDiv = styled.div`
-  // position: relative;
-  // width: 100vw;
+
   height: 14vh;
   background-color: white;
   max-width: 100%;
@@ -141,6 +251,29 @@ const ContactDiv = styled.div`
   display: flex;
   align-items: center;
   gap: 400px;
+
+  @media (max-width: 991px) {
+    padding-left: 80px;
+    padding-right: 100px;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  @media (max-width: 750px) {
+    height: 12vh;
+    padding-left: 40px;
+    padding-right: 60px;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  @media (max-width: 500px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-direction: column;
+    gap: 0px;
+    height: 14%;
+  }
 `;
 
 const ContactHeader = styled.h1`
@@ -151,7 +284,15 @@ const ContactHeader = styled.h1`
   font-style: normal;
   font-size: 18px;
 
-  
+  @media (max-width: 750px) {
+    font-size: 18px;
+  }
+  @media (max-width: 500px) {
+    padding-bottom: 0px;
+
+    font-size: 16px;
+    text-align: center;
+  }
   
 `;
 
@@ -163,8 +304,17 @@ const ContactParagraph = styled.p`
   font-style: normal;
   font-size: 15px;
 
+  @media (max-width: 750px) {
+    font-size: 16px;
+  }
 
-
+  @media (max-width: 500px) {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
 `;
 
 const Footer = () => {
@@ -176,7 +326,6 @@ const Footer = () => {
 }
 
 const FooterDiv = styled.div`
-  // position: relative;
   // width: 100vw;
   // height: 10vh;
   padding: 20px 130px;
@@ -191,6 +340,19 @@ const FooterDiv = styled.div`
   font-style: normal;
   font-size: 14px;
   text-transform: uppercase;
+
+  @media (max-width: 991px) {;
+    padding: 20px 80px;
+  }
+
+  @media (max-width: 750px) {
+    padding: 20px 40px;
+  }
+
+  @media (max-width: 500px) {
+    padding-left: 20px;
+     font-size: 10px;
+  }
 `;
 
 export default Home;

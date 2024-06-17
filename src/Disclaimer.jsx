@@ -94,6 +94,18 @@ const StyledButton = styled.div`
     line-height: 1.2;
     border: none;
     cursor: pointer;
+
+    @media (max-width: 991px) {
+        width: 8vw;
+    }
+
+    @media (max-width: 600px) {
+        width: 12vw;
+    }
+    
+    @media (max-width: 425px) {
+        width: 16vw;
+    }
     `;
 
 export default Disclaimer;

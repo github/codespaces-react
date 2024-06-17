@@ -1,3 +1,17 @@
+@media (max-width: 991px) {
+  .App {
+      font-size: 36px !important;
+      line-height: 46px !important;
+      margin-bottom: 15px !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+}
+
 .App {
   text-align: center;
 }
@@ -29,3 +43,4 @@
 .small {
   font-size: 0.75rem;
 }
+

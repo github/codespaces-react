@@ -1,11 +1,24 @@
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Home from './Home';
 import Splash from './Splash';
 import Disclaimer from './Disclaimer';
 
 const App = () => {
+  const COOKIE_NAME = 'has_visited_before';
   const [showPage, setShowPage] = useState(0);
+
+  useEffect(() => {
+    const getCookieValue = (name) => (
+      document.cookie.split('; ').find(row => row.startsWith(name + '='))?.split('=')[1]
+    );
+    
+    const cookie = getCookieValue(COOKIE_NAME)
+    if(cookie){
+      setShowPage(2);
+    }
+
+  }, [])
 
   const setPage = () => {
     setShowPage(showPage+1);
