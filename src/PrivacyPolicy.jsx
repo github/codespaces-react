@@ -4,24 +4,24 @@ import ContactInfo from './ContactInfo';
 import NavBar from './NavBar';
 import PagePath from './PagePath';
 
-const Disclaimer = ({setPage}) => {
+const PrivacyPolicy = ({setPage}) => {
 
     return (
         <>
             <NavBar/>
-            <PagePath setPage={setPage} pageName={"Disclaimer"}/>
-            <StyledDisclaimer>
-                <Header>Disclaimer</Header>
+            <PagePath setPage={setPage} pageName={"Privacy Policy"}/>
+            <StyledPolicy>
+                <Header>Privacy Policy</Header>
                 <LegalJargonBox/>
                 {/* <StyledButton onClick={()=>setPage(1)}>Agree</StyledButton> */}
-            </StyledDisclaimer>
+            </StyledPolicy>
             <ContactInfo/>
             <Footer setPage = {setPage}/>
         </>
     );
     }  
 
-const StyledDisclaimer = styled.div`
+const StyledPolicy = styled.div`
     height: 100%;
     max-width: 100%;   
     background: #fff;
@@ -108,4 +108,4 @@ const StyledButton = styled.div`
     }
     `;
 
-export default Disclaimer;
+export default PrivacyPolicy;

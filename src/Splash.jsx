@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 
 
 const Splash = ({setPage}) => {
-
   const [cursorx, setCursorx] = useState(0);
   const [cursory, setCursory] = useState(0);
 
@@ -14,13 +13,13 @@ const Splash = ({setPage}) => {
     // let cursory = event.clientY;
     console.log(cursorx, cursory);
   }
-
   return (
-    <StyledSplash onMouseMove={coordinates} onClick={setPage}>
+    <StyledSplash onMouseMove={coordinates} onClick={()=>setPage(1)}>
         <EntrancePic src="photo-entrance.jpg" alt="BFAM Partners" />
         <Spotlight cursorX={cursorx} cursorY={cursory} />
         <Logo src="logo-blue.svg" alt="BFAM Partners"/>
     </StyledSplash>
+    
   );
 }
 
@@ -31,7 +30,7 @@ const Spotlight = styled.div`
   width: 100%;
   height: 100%;
   pointer-events: none;
-  background: radial-gradient(circle 10vmax at ${props => props.cursorX}px ${props => props.cursorY}px, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  background: radial-gradient(circle 15vmax at ${props => props.cursorX}px ${props => props.cursorY}px, rgba(255, 255, 255, 0) 0%, #fff 100%);
   `;
 
 const StyledSplash = styled.div`

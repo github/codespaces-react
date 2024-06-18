@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { useEffect } from 'react';
+import Footer from './Footer';
+import ContactInfo from './ContactInfo';
 
-const Home = () => {
+const Home = ({setPage}) => {
   
   useEffect(() => {
     document.cookie = 'has_visited_before=true; path=/';
@@ -9,14 +11,14 @@ const Home = () => {
 
   return (
     <>
-     <HeroDiv>
+      <HeroDiv>
         <Logo src="logo-white.svg" alt="BFAM Partners" />
         <Timelapse />
         <Overlay />
         <BFAMBio />
       </HeroDiv>
       <ContactInfo/>
-      <Footer/>
+      <Footer setPage = {setPage}/>
     </>
 
   );
@@ -224,134 +226,6 @@ const HeroDiv = styled.div`
 
   @media (max-width: 500px) {
     height: 100vh;
-  }
-`;
-
-const ContactInfo = () => {
-  return (
-    <ContactDiv>
-      <div>
-        <ContactHeader>Contact Us</ContactHeader>
-        <ContactParagraph> 32/F, 148 Electric Road, North Point, Hong Kong | info@bfam-partners.com </ContactParagraph>
-      </div>
-      <div>
-        <ContactHeader>Telephone</ContactHeader>
-        <ContactParagraph> +852 3409 8888 </ContactParagraph>
-      </div>
-    </ContactDiv>
-  );
-}
-
-const ContactDiv = styled.div`
-
-  height: 14vh;
-  background-color: white;
-  max-width: 100%;
-  padding: 0 130px;
-  display: flex;
-  align-items: center;
-  gap: 400px;
-
-  @media (max-width: 991px) {
-    padding-left: 80px;
-    padding-right: 100px;
-    justify-content: space-between;
-    gap: 10px;
-  }
-
-  @media (max-width: 750px) {
-    height: 12vh;
-    padding-left: 40px;
-    padding-right: 60px;
-    justify-content: space-between;
-    gap: 10px;
-  }
-
-  @media (max-width: 500px) {
-    padding-left: 20px;
-    padding-right: 20px;
-    flex-direction: column;
-    gap: 0px;
-    height: 14%;
-  }
-`;
-
-const ContactHeader = styled.h1`
-  color: #002f6c;
-  font-family: "Libre Franklin", sans-serif;
-  // font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 18px;
-
-  @media (max-width: 750px) {
-    font-size: 18px;
-  }
-  @media (max-width: 500px) {
-    padding-bottom: 0px;
-
-    font-size: 16px;
-    text-align: center;
-  }
-  
-`;
-
-const ContactParagraph = styled.p`
-  color: #3d3d3d;
-  font-family: "Libre Franklin", sans-serif;
-  // font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 15px;
-
-  @media (max-width: 750px) {
-    font-size: 16px;
-  }
-
-  @media (max-width: 500px) {
-    font-size: 16px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  
-`;
-
-const Footer = () => {
-  return (
-    <FooterDiv>
-      ©2012 - 2024 BFAM Partners TM 
-    </FooterDiv>
-  );
-}
-
-const FooterDiv = styled.div`
-  // width: 100vw;
-  // height: 10vh;
-  padding: 20px 130px;
-  background-color: #002f6c;
-  max-width: 100%;
-
-  display: flex;
-  color: white;
-  font-family: "Libre Franklin", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 14px;
-  text-transform: uppercase;
-
-  @media (max-width: 991px) {;
-    padding: 20px 80px;
-  }
-
-  @media (max-width: 750px) {
-    padding: 20px 40px;
-  }
-
-  @media (max-width: 500px) {
-    padding-left: 20px;
-     font-size: 10px;
   }
 `;
 
