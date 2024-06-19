@@ -55,7 +55,7 @@ const Logo = styled.img`
 // create a component that displays video-hero.mp4 on loop
 const Timelapse = () => {
   return (
-    <StyledVideo autoPlay loop muted>
+    <StyledVideo autoPlay loop muted playsInline>
       <source src="video-hero.mp4" type="video/mp4" />
     </StyledVideo>
   );

@@ -26,6 +26,17 @@ const StyledDisclaimer = styled.div`
     max-width: 100%;   
     background: #fff;
     padding: 30px 130px;
+    @media (max-width: 991px) {;
+        padding: 20px 80px;
+    }
+    @media (max-width: 750px) {
+        padding: 20px 40px;
+        gap: 10px;
+    }
+    @media (max-width: 500px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     `;
 
 const Header = styled.h1`
@@ -77,35 +88,19 @@ const StyledJargon = styled.p`
     line-height: 26px;
 
     word-break: break-word;
-    word-wrap: break-word;    
-    `;
-
-const StyledButton = styled.div`
-
-    padding: 10px 34px;
-    color: #002f6c;
-    background: #fff;
-    width: 4vw;
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 17px;
-    line-height: 1.2;
-    border: none;
-    cursor: pointer;
-
-    @media (max-width: 991px) {
-        width: 8vw;
-    }
-
-    @media (max-width: 600px) {
-        width: 12vw;
-    }
+    word-wrap: break-word;   
     
-    @media (max-width: 425px) {
-        width: 16vw;
+    @media (max-width: 991px) {;
+        font-size: 16px;
     }
-    `;
+    @media (max-width: 750px) {
+        font-size: 15px;
+    }
+    @media (max-width: 500px) {
+        font-size: 14px;
+    }
+`;
+
+
 
 export default Disclaimer;

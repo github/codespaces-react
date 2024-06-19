@@ -6,7 +6,7 @@ const ContactInfo = () => {
       <div>
         <ContactHeader>Contact Us</ContactHeader>
         {/* <ContactParagraph> <p>32/F, 148 Electric Road, North Point, Hong Kong | </p><p> info@bfam-partners.com</p> </ContactParagraph> */}
-        <ContactParagraph> 32/F, 148 Electric Road, North Point, Hong Kong | info@bfam-partners.com </ContactParagraph>
+        <ContactParagraph> 35/F, 148 Electric Road, North Point, Hong Kong  &nbsp; &nbsp; | &nbsp; &nbsp; info@bfam-partners.com </ContactParagraph>
       </div>
       <div>
         <ContactHeader>Telephone</ContactHeader>

@@ -11,7 +11,7 @@ const Splash = ({setPage}) => {
     setCursory(event.clientY);
     // let cursorx = event.clientX;
     // let cursory = event.clientY;
-    console.log(cursorx, cursory);
+    // console.log(cursorx, cursory);
   }
   return (
     <StyledSplash onMouseMove={coordinates} onClick={()=>setPage(1)}>
