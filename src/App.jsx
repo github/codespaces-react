@@ -6,19 +6,19 @@ function App() {
       <header className="App-header">
         <img src="Octocat.png" className="App-logo" alt="logo" />
         <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
+          Wood <span className="heart">♥️</span> Working
         </p>
         <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
+        Iam lloking for woodworking around the wolrd
         </p>
         <p>
           <a
             className="App-link"
-            href="https://reactjs.org"
+            href="https://terminologyii.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            Welcome to this page!
           </a>
         </p>
       </header>
