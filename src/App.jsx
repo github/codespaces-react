@@ -4,12 +4,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
+        <img src="octocat.png" className="App-logo" alt="logo" />
         <p>
           Wood <span className="heart">🪚</span> Working
         </p>
         <p className="small">
-        Iam lloking for woodworking around the wolrd
+        I am lloking for woodworking around the wolrd
         </p>
         <p>
           <a
@@ -18,7 +18,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Welcome to this page!
+            Welcome to TERMINOLOGY II website
           </a>
         </p>
       </header>
