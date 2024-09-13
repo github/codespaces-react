@@ -6,7 +6,7 @@ function App() {
       <header className="App-header">
         <img src="Octocat.png" className="App-logo" alt="logo" />
         <p>
-          Wood <span className="heart">♥️</span> Working
+          Wood <span className="heart">🪚</span> Working
         </p>
         <p className="small">
         Iam lloking for woodworking around the wolrd
