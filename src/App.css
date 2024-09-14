@@ -7,6 +7,34 @@
   pointer-events: none;
 }
 
+/* Rotate Image 1 */
+.octocat.png {
+  display: block;
+  position: absolute;
+  top: 24.5rem;
+  right: 10.2rem;
+  width: 49.3rem;
+  height: 49.3rem;
+  margin: -15px 0 0 -17rem;
+  -webkit-transition: -webkit-transform 1s;
+}
+
+.octocat.png:hover {
+  -webkit-transform: rotate(360deg) translateZ(0);
+  border: none;
+  border-radius: 90%;
+}
+
+.dev {
+  position: absolute;
+  right: 31rem;
+  top: 39rem;
+  width: 8rem;
+
+}
+/* End of Rotate Image 1 */
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
