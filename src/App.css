@@ -1,6 +1,5 @@
 .App {
-	
-	top:100rem;
+
   text-align: center;
 }
 
@@ -34,7 +33,7 @@
 
 .App-header
 .subtitles {
-  top:80%;
+  top:60%;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
