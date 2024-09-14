@@ -2,13 +2,9 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 /* Rotate Image 1 */
-.octocat.png {
+.App-logo {
   display: block;
   position: absolute;
   top: 24.5rem;
@@ -19,19 +15,13 @@
   -webkit-transition: -webkit-transform 1s;
 }
 
-.octocat.png:hover {
+.App-logo:hover {
   -webkit-transform: rotate(360deg) translateZ(0);
   border: none;
   border-radius: 90%;
 }
 
-.dev {
-  position: absolute;
-  right: 31rem;
-  top: 39rem;
-  width: 8rem;
 
-}
 /* End of Rotate Image 1 */
 
 
