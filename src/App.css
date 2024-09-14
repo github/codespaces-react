@@ -7,11 +7,11 @@ top: 0rem;
 /*rotate image-03 css*/
 .App-logo {
 	position: fixed;
-	top: 5rem;
+	top: 3rem;
 	justify-content: center;
 	align-items: center;
-	width: 40rem;
-	height: 40rem;
+	width: 35rem;
+	height: 35rem;
 	margin: 0rem 0rem;
 	-webkit-animation: spin 5s linear infinite;
 	-moz-animation: spin 5s linear infinite;
