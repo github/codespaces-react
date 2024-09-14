@@ -7,7 +7,7 @@
 
 /*rotate image-03 css*/
 .App-logo {
-	position: relative;
+	position: fixed;
 	top: 10%;
 	justify-content: center;
 	align-items: center;
@@ -31,10 +31,10 @@
 }
 
 
-.subtitles {
-	top: 80%;
-.App-header {
 
+.App-header
+.subtitles {
+  top:80%;
   top: 100rem;
   background-color: #282c34;
   min-height: 100vh;
