@@ -6,7 +6,8 @@ top: 0rem;
 
 /*rotate image-03 css*/
 .App-logo {
-	position: relative;
+	position: fixed;
+	display: flex;
 	top: 5rem;
 	justify-content: center;
 	align-items: center;
