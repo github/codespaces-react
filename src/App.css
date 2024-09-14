@@ -6,14 +6,15 @@
 /*rotate image-03 css*/
 .App-logo {
 	position: fixed;
-	top: 50%;
-	left: 50%;
-	width: 150px;
-	height: 150px;
+	top: 25%;
+	justify-content: center;
+	align-items: center;
+	width: 75rem;
+	height: 75rem;
 	margin: -60px 0 0 150px;
-	-webkit-animation: spin 1s linear infinite;
-	-moz-animation: spin 1s linear infinite;
-	animation: spin 1s linear infinite;
+	-webkit-animation: spin 5s linear infinite;
+	-moz-animation: spin 5s linear infinite;
+	animation: spin 5s linear infinite;
 }
 
 /*use keyframes*/
