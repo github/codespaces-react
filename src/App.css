@@ -1,4 +1,5 @@
 .App {
+	position: relative;
 	top:100rem;
   text-align: center;
 }
