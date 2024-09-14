@@ -13,7 +13,7 @@ top: 0rem;
 	align-items: center;
 	width: 35rem;
 	height: 35rem;
-	margin: 0rem 0rem;
+	
 	-webkit-animation: spin 5s linear infinite;
 	-moz-animation: spin 5s linear infinite;
 	animation: spin 5s linear infinite;
@@ -31,9 +31,7 @@ top: 0rem;
 	100%{-webkit-transform: rotate(360deg);}
 }
 
-.subtitles {
-	height: 100vh;
-	width: 100%;
+
 
 .App-header { 
 top: 90%;
