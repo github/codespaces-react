@@ -5,9 +5,8 @@ top: 0rem;
 
 
 /*rotate image-03 css*/
-.App-logo img {
+.App-logo {
 	position: fixed;
-	display: flex;
 	top: 5rem;
 	justify-content: center;
 	align-items: center;
@@ -30,11 +29,12 @@ top: 0rem;
 	100%{-webkit-transform: rotate(360deg);}
 }
 
-
-
-.App-header
 .subtitles {
-  top: 0rem;
+	height: 100vh;
+	width: 100%;
+
+.App-header { 
+
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
