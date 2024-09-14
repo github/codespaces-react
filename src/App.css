@@ -3,27 +3,29 @@
 }
 
 
-/* Rotate Image 1 */
+/*rotate image-03 css*/
 .App-logo {
-  display: block;
-  position: absolute;
-  top: 24.5rem;
-  right: 10.2rem;
-  width: 49.3rem;
-  height: 49.3rem;
-  margin: -15px 0 0 -17rem;
-  -webkit-transition: -webkit-transform 1s;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 150px;
+	height: 150px;
+	margin: -60px 0 0 150px;
+	-webkit-animation: spin 1s linear infinite;
+	-moz-animation: spin 1s linear infinite;
+	animation: spin 1s linear infinite;
 }
 
-.App-logo:hover {
-  -webkit-transform: rotate(360deg) translateZ(0);
-  border: none;
-  border-radius: 90%;
+/*use keyframes*/
+@-webkit-keyframes spin{
+	100%{-webkit-transform: rotate(360deg);}
 }
-
-
-/* End of Rotate Image 1 */
-
+@-moz-keyframes spin{
+	100%{-webkit-transform: rotate(360deg);}
+}
+@keyframes spin{
+	100%{-webkit-transform: rotate(360deg);}
+}
 
 .App-header {
   background-color: #282c34;
