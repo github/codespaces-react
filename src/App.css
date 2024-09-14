@@ -1,5 +1,5 @@
 .App {
-	position: relative;
+	position: absolute;
 	top:100rem;
   text-align: center;
 }
@@ -7,7 +7,7 @@
 
 /*rotate image-03 css*/
 .App-logo {
-	position: fixed;
+	position: relative;
 	top: 10%;
 	justify-content: center;
 	align-items: center;
