@@ -1,4 +1,5 @@
 .App {
+	top:100rem;
   text-align: center;
 }
 
@@ -29,7 +30,7 @@
 }
 
 .App-header {
-  position: absolute;
+
   top: 100rem;
   background-color: #282c34;
   min-height: 100vh;
@@ -42,19 +43,19 @@
 }
 
 .App-link {
-	position: absolute;
+	
 	top: 100rem;
   color: #61dafb;
 }
 
 .heart {
-		position: absolute;
+	
 	top: 100rem;
   color: #ff0000;
 }
 
 .small {
-		position: absolute;
+	
 	top: 100rem;
   font-size: 0.75rem;
 }
