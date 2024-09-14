@@ -1,5 +1,6 @@
 .App {
 top: 0rem;
+	background-color: #282c34;
   text-align: center;
 }
 
@@ -16,6 +17,7 @@ top: 0rem;
 	-webkit-animation: spin 5s linear infinite;
 	-moz-animation: spin 5s linear infinite;
 	animation: spin 5s linear infinite;
+	background-color: #282c34;
 }
 
 /*use keyframes*/
@@ -34,7 +36,7 @@ top: 0rem;
 	width: 100%;
 
 .App-header { 
-
+top: 90%;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
