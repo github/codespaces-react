@@ -10,8 +10,8 @@ top: 0rem;
 	top: 2rem;
 	justify-content: center;
 	align-items: center;
-	width: 45rem;
-	height: 45rem;
+	width: 40rem;
+	height: 40rem;
 	
 	-webkit-animation: spin 5s linear infinite;
 	-moz-animation: spin 5s linear infinite;
