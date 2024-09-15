@@ -34,7 +34,7 @@ top: 0rem;
 
 .subtitles{
 	top: 60rem;
-	position: relative;
+	position: absolute;
 	background-color: #282c34;
 .App-header { 
 	
