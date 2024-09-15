@@ -4,10 +4,9 @@ top: 0rem;
   text-align: center;
 }
 
-
 /*rotate image-03 css*/
 .App-logo {
-	position: fixed;
+	position: relative;
 	top: 2rem;
 	justify-content: center;
 	align-items: center;
@@ -31,9 +30,7 @@ top: 0rem;
 	100%{-webkit-transform: rotate(360deg);}
 }
 
-.p {
-	top: 60rem:
-}
+
 
 .App-header { 
 	
