@@ -32,7 +32,9 @@ top: 0rem;
 }
 
 
-
+.subtitles{
+	top: 100rem;
+	position: relative;
 .App-header { 
 	
 
