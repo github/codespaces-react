@@ -34,6 +34,7 @@ top: 0rem;
 
 
 .App-header { 
+	position: relative;
 top: 90%;
   background-color: #282c34;
   min-height: 100vh;
