@@ -8,7 +8,7 @@ function App() {
 
         <div className="subtitles">
         <p>
-          Wood <span className="heart">🪚</span> Working
+          Wood <span className="heart">🌲🪚</span> Working
         </p>
         <p className="small">
         Looking for WoodWorking around the wolrd
@@ -20,7 +20,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Welcome to TERMINOLOGY II website
+            Get started here
           </a>
         </p>
           </div>
