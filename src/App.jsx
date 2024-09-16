@@ -16,7 +16,7 @@ function App() {
         <p>
           <a
             className="App-link"
-            href="https://terminologyii.netlify.app"
+            href="https://mainterminologyii.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
           >
