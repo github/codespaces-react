@@ -31,6 +31,8 @@ function Dashboard({ setIsAuthenticated }) {
     }
   }, [loading]);
 
+  
+
   useEffect(() => {
     fetchData();
   }, []); // ✅ Solo se ejecuta una vez al montar el componente
