@@ -1,21 +1,29 @@
-function DataTable({ data }) {
+function DataTable({ data = [] }) { // Asegura que data sea un array por defecto
     return (
-      <table border="1">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Título</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((album) => (
-            <tr key={album.id}>
-              <td>{album.id}</td>
-              <td>{album.title}</td>
+      <div className="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Título</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {data.length > 0 ? (
+              data.map((album) => (
+                <tr key={`${Math.random()}-${album.id}`}>
+                  <td>{album.id}</td>
+                  <td>{album.title}</td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="2">No hay datos disponibles</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
     );
   }
   
