@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import DataTable from "../components/Datatable";
+import Swal from "sweetalert2";
 
 function Dashboard({ setIsAuthenticated }) {
   const [albums, setAlbums] = useState([]);
@@ -31,7 +32,15 @@ function Dashboard({ setIsAuthenticated }) {
     }
   }, [loading]);
 
-  
+  const isAuth = () => {
+    setIsAuthenticated(false);
+    Swal.fire({
+        title: "Sesión cerrada",
+        text: "Has cerrado sesión.",
+        icon: "info",
+        confirmButtonColor: "#d33",
+      });
+  }
 
   useEffect(() => {
     fetchData();
@@ -40,7 +49,7 @@ function Dashboard({ setIsAuthenticated }) {
   return (
     <div className="dashboard-container">
       <h2>Dashboard</h2>
-      <button className="logout" onClick={() => setIsAuthenticated(false)}>
+      <button className="logout" onClick={isAuth}>
         Cerrar sesión
       </button>
       <DataTable data={albums} />
