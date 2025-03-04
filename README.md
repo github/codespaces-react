@@ -1,70 +1,75 @@
-# GitHub Codespaces ♥️ React
+Proyecto ReactJS con Autenticación y DataTable
 
-Welcome to your shiny new Codespace running React! We've got everything fired up and running for you to explore React.
+Este es un proyecto desarrollado en ReactJS que incluye un sistema de autenticación simple, consumo de API con paginación y una tabla de datos interactiva.
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
+📌 Características
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+Inicio de sesión con validación y alertas visuales con SweetAlert2.
 
-This project was bootstrapped for you with [Vite](https://vitejs.dev/).
+Persistencia de sesión en localStorage.
 
-## Available Scripts
+Consumo de API con axios, manejando la paginación de datos.
 
-In the project directory, you can run:
+Tabla de datos con paginación y ordenamiento.
 
-### `npm start`
+Indicador de carga (spinner) para mejorar la experiencia de usuario.
 
-We've already run this for you in the `Codespaces: server` terminal window below. If you need to stop the server for any reason you can just run `npm start` again to bring it back online.
+Diseño responsivo con estilos mejorados.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000/](http://localhost:3000/) in the built-in Simple Browser (`Cmd/Ctrl + Shift + P > Simple Browser: Show`) to view your running application.
+🚀 Instalación y Configuración
 
-The page will reload automatically when you make changes.\
-You may also see any lint errors in the console.
+Clona el repositorio:
 
-### `npm test`
+git clone https://github.com/tuusuario/react-dashboard.git
+cd react-dashboard
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Instala las dependencias:
 
-### `npm run build`
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Inicia el servidor de desarrollo:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🛠️ Tecnologías Utilizadas
 
-## Learn More
+ReactJS (useState, useEffect, useCallback)
 
-You can learn more in the [Vite documentation](https://vitejs.dev/guide/).
+Axios (Consumo de API)
 
-To learn Vitest, a Vite-native testing framework, go to [Vitest documentation](https://vitest.dev/guide/)
+SweetAlert2 (Alertas visuales)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Bootstrap (Diseño y estilos)
 
-### Code Splitting
+📂 Estructura del Proyecto
 
-This section has moved here: [https://sambitsahoo.com/blog/vite-code-splitting-that-works.html](https://sambitsahoo.com/blog/vite-code-splitting-that-works.html)
+📁 src/
+ ├── 📁 components/
+ │   ├── LoginForm.jsx   # Formulario de inicio de sesión
+ │   ├── DataTable.jsx   # Tabla de datos con paginación
+ ├── 📁 pages/
+ │   ├── Dashboard.jsx   # Página principal tras el login
+ ├── App.js             # Controla la autenticación y el layout
+ ├── index.js           # Punto de entrada de la aplicación
 
-### Analyzing the Bundle Size
+🔑 Credenciales de Prueba
 
-This section has moved here: [https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer](https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer)
+Para iniciar sesión, usa:
 
-### Making a Progressive Web App
+Usuario: admin
 
-This section has moved here: [https://dev.to/hamdankhan364/simplifying-progressive-web-app-pwa-development-with-vite-a-beginners-guide-38cf](https://dev.to/hamdankhan364/simplifying-progressive-web-app-pwa-development-with-vite-a-beginners-guide-38cf)
+Contraseña: 1234
 
-### Advanced Configuration
+📌 Mejoras Futuras
 
-This section has moved here: [https://vitejs.dev/guide/build.html#advanced-base-options](https://vitejs.dev/guide/build.html#advanced-base-options)
+Implementar autenticación con JWT.
 
-### Deployment
+Mejorar la interfaz con Material-UI o TailwindCSS.
 
-This section has moved here: [https://vitejs.dev/guide/build.html](https://vitejs.dev/guide/build.html)
+Añadir más funcionalidades al Dashboard.
 
-### Troubleshooting
+📄 Licencia
 
-This section has moved here: [https://vitejs.dev/guide/troubleshooting.html](https://vitejs.dev/guide/troubleshooting.html)
+Este proyecto está bajo la licencia MIT. ¡Siéntete libre de modificarlo y usarlo! 🚀
+
+Julian Ortega.
