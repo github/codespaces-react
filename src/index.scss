@@ -1,0 +1,86 @@
+$primary-color: purple;
+$secondary-color: black;
+$button-radius: 5px;
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, $secondary-color, purple, gray);
+}
+
+.login-wrapper {
+  width: 70%;
+  /* max-width: 700px; */
+  display: flex;
+  flex-direction: row; /* Cambiado de columna a fila */
+  background: white;
+  border-radius: 12px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  margin: auto;
+}
+
+.login-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.login-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.login-form {
+  width: 50%;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: $primary-color;
+  color: white;
+  border: none;
+  border-radius: $button-radius;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &:hover {
+    background: lighten($primary-color, 20%);
+  }
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.dashboard-container{
+  max-height: 100vh; /* Corrección: vh en lugar de hv */
+  overflow-y: auto; /* Agrega scroll solo si es necesario */
+  padding: 20px; /* Evita que el contenido se pegue a los bordes */
+  box-sizing: border-box; /* Asegura que padding no afecte el tamaño total */
+}

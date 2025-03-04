@@ -1,28 +1,35 @@
-import './App.css';
+import { useState, useEffect } from "react";
+import LoginForm from "./components/login";
+import Dashboard from "./pages/Dashboard";
+import Swal from "sweetalert2";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
-    </div>
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    () => JSON.parse(localStorage.getItem("isAuthenticated")) || false
+  );
+
+  useEffect(() => {
+    localStorage.setItem("isAuthenticated", JSON.stringify(isAuthenticated));
+
+    document.body.style.background = isAuthenticated
+      ? "linear-gradient(135deg, rgb(124, 208, 238), rgb(5, 105, 196))"
+      : "linear-gradient(135deg, black, purple, gray)";
+
+    // Mostrar alerta al iniciar/cerrar sesión
+    if (isAuthenticated ) {
+      Swal.fire({
+        title: "Bienvenido",
+        text: "Has iniciado sesión correctamente.",
+        icon: "success",
+        confirmButtonColor: "#3085d6",
+      });
+    }
+  }, [isAuthenticated]);
+
+  return isAuthenticated ? (
+    <Dashboard setIsAuthenticated={setIsAuthenticated} />
+  ) : (
+    <LoginForm setIsAuthenticated={setIsAuthenticated} />
   );
 }
 
