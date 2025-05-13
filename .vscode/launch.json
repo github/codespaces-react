@@ -5,7 +5,7 @@
       "name": "Run application",
       "type": "node",
       "request": "launch",
-      "cwd": "${workspaceFolder}",
+      "cwd": "${workSpaceFolder}",
       "console": "integratedTerminal",
       "runtimeExecutable": "npm",
       "runtimeArgs": [
