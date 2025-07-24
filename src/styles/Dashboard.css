@@ -1,0 +1,64 @@
+.albums-table {
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.albums-table thead {
+  background-color: white;
+  color: white;
+  text-align: middle;
+}
+
+.albums-table th,
+.albums-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+  color: #333;
+}
+
+.albums-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.albums-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.view-more-button,
+.logout-button {
+  padding: 10px 20px;
+  margin: 10px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-weight: 500;
+}
+
+.view-more-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.view-more-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+.logout-button {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+.logout-button:hover {
+  background-color: #e43e3e;
+  transform: translateY(-1px);
+}
