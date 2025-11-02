@@ -1,28 +1,32 @@
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AppLayout from './components/AppLayout';
+import Sidebar from './components/Sidebar';
+import Feed from './components/Feed';
+import Trending from './components/Trending';
+import RaiseIssue from './components/RaiseIssue';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
-    </div>
+    <Router>
+      <div className="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-gray-200">
+        <Routes>
+          <Route path="/" element={
+            <AppLayout
+              left={<Sidebar />}
+              middle={<Feed />}
+              right={<Trending />}
+            />
+          } />
+          <Route path="/raise-issue" element={
+            <AppLayout
+            left={<Sidebar />}
+            middle={<RaiseIssue />}
+            right={<Trending />}
+          />
+          } />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
