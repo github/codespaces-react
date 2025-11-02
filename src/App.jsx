@@ -1,28 +1,29 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import SocialFeed from './pages/SocialFeed';
+import RaiseIssue from './pages/RaiseIssue';
+import Fundraiser from './pages/Fundraiser';
+import Explore from './pages/Explore';
+import OnlineProtestRoom from './pages/OnlineProtestRoom';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/social" element={<SocialFeed />} />
+          <Route path="/raise-issue" element={<RaiseIssue />} />
+          <Route path="/fundraisers" element={<Fundraiser />} />
+          <Route path="/protests" element={<OnlineProtestRoom />} />
+          <Route path="/explore" element={<Explore />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
