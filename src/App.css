@@ -1,31 +1,94 @@
+body {
+  background: #f8fafc;
+  margin: 0;
+  font-family: "Segoe UI", "Roboto", "Arial", sans-serif;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
-  background-color: #282c34;
+  background: #f8fafc;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #3a3a3a;
+  padding-top: 40px;
 }
 
+h1 {
+  color: #355c7d;
+  margin-bottom: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #e3ecfa;
+}
+
+form input[type="text"] {
+  padding: 10px;
+  border: 1px solid #e0e7ef;
+  border-radius: 8px;
+  background: #f0f4ff;
+  color: #3a3a3a;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+form input[type="text"]:focus {
+  border: 1.5px solid #a5b4fc;
+  background: #e0e7ef;
+}
+form button {
+  background: linear-gradient(90deg, #a5b4fc 0%, #fbc2eb 100%);
+  color: #3a3a3a;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+form button:hover {
+  background: linear-gradient(90deg, #fbc2eb 0%, #a5b4fc 100%);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  background: linear-gradient(135deg, #e3ecfa 0%, #b6c6e6 100%);
+  border-radius: 14px;
+  margin-bottom: 20px;
+  padding: 22px 28px 16px 28px;
+  box-shadow: 0 4px 16px rgba(120, 140, 180, 0.1);
+  text-align: left;
+  border: 1.5px solid #d0d8e8;
+}
+li a {
+  color: #355c7d;
+  text-decoration: none;
+  font-size: 1.18rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+li a:hover {
+  color: #2a4365;
+  text-decoration: underline;
+}
 .App-link {
-  color: #61dafb;
+  color: #7f9cf5;
 }
-
 .heart {
-  color: #ff0000;
+  color: #fbb6ce;
 }
-
 .small {
   font-size: 0.75rem;
+  color: #a0aec0;
 }
