@@ -68,3 +68,4 @@ This section has moved here: [https://vitejs.dev/guide/build.html](https://vitej
 ### Troubleshooting
 
 This section has moved here: [https://vitejs.dev/guide/troubleshooting.html](https://vitejs.dev/guide/troubleshooting.html)
+Modification perso pour le cours 1
