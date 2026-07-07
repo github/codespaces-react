@@ -12,7 +12,7 @@
   "customizations": {
     "codespaces": {
       "openFiles": [
-        "src/App.js"
+        "src/App.jsx"
       ]
     }
   },
