@@ -1,35 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using @vitejs/plugin-react"
-    />
-    <link rel="apple-touch-icon" href="/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="/manifest.json" />
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Food Ordering System</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+body{
+    background:white;
+}
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
-  <script type="module" src="/src/index.jsx"></script>
+header{
+    background-color:#d35400;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+h2{
+    margin:20px 0;
+    color:#d35400;
+}
+
+.menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+    padding:20px;
+    text-align:center;
+}
+
+.card h3{
+    color:#333;
+}
+
+.card p{
+    color:#d35400;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.card input[type="number"]{
+    width:60px;
+    padding:5px;
+}
+
+form{
+    margin-top:20px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+
+button{
+    background:#d35400;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    font-size:16px;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#a04000;
+}
+
+#summary{
+    margin-top:20px;
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+    white-space:pre-line;
+}
+
+@media(max-width:600px){
+    .menu{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>🍔 Online Food Ordering System</h1>
+</header>
+
+<div class="container">
+
+<h2>Food Menu</h2>
+
+<div class="menu">
+
+<div class="card">
+<h3>Burger</h3>
+<p>₹120</p>
+<input type="checkbox" id="burger">
+Qty:
+<input type="number" id="burgerQty" min="1" value="1">
+</div>
+
+<div class="card">
+<h3>Pizza</h3>
+<p>₹250</p>
+<input type="checkbox" id="pizza">
+Qty:
+<input type="number" id="pizzaQty" min="1" value="1">
+</div>
+
+<div class="card">
+<h3>Sandwich</h3>
+<p>₹90</p>
+<input type="checkbox" id="sandwich">
+Qty:
+<input type="number" id="sandwichQty" min="1" value="1">
+</div>
+
+<div class="card">
+<h3>Fries</h3>
+<p>₹80</p>
+<input type="checkbox" id="fries">
+Qty:
+<input type="number" id="friesQty" min="1" value="1">
+</div>
+
+<div class="card">
+<h3>Juice</h3>
+<p>₹60</p>
+<input type="checkbox" id="juice">
+Qty:
+<input type="number" id="juiceQty" min="1" value="1">
+</div>
+
+</div>
+
+<h2>Customer Details</h2>
+
+<form>
+
+<input type="text" id="name" placeholder="Customer Name">
+
+<input type="text" id="mobile" placeholder="Mobile Number">
+
+<textarea id="address" rows="4" placeholder="Address"></textarea>
+
+<button type="button" onclick="placeOrder()">Place Order</button>
+
+</form>
+
+<h2>Order Summary</h2>
+
+<div id="summary">
+Order details will appear here.
+</div>
+
+</div>
+
+<script>
+
+function placeOrder(){
+
+let name=document.getElementById("name").value.trim();
+let mobile=document.getElementById("mobile").value.trim();
+let address=document.getElementById("address").value.trim();
+
+if(name=="" || mobile=="" || address==""){
+    alert("Please fill all customer details.");
+    return;
+}
+
+if(!/^[0-9]{10}$/.test(mobile)){
+    alert("Enter a valid 10-digit mobile number.");
+    return;
+}
+
+let items=[
+["Burger",120,"burger","burgerQty"],
+["Pizza",250,"pizza","pizzaQty"],
+["Sandwich",90,"sandwich","sandwichQty"],
+["Fries",80,"fries","friesQty"],
+["Juice",60,"juice","juiceQty"]
+];
+
+let output="Customer: "+name+"\n\n";
+let total=0;
+let ordered=false;
+
+for(let i=0;i<items.length;i++){
+
+let item=items[i];
+
+if(document.getElementById(item[2]).checked){
+
+ordered=true;
+
+let qty=parseInt(document.getElementById(item[3]).value);
+
+let sub=qty*item[1];
+
+total+=sub;
+
+output+=item[0]+" x"+qty+" = ₹"+sub+"\n";
+
+}
+
+}
+
+if(!ordered){
+    alert("Please select at least one food item.");
+    return;
+}
+
+output+="--------------------------\n";
+output+="Grand Total = ₹"+total+"\n\n";
+output+="Thank You for Ordering!";
+
+document.getElementById("summary").innerText=output;
+
+}
+
+</script>
+
+</body>
 </html>
