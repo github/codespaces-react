@@ -1,0 +1,58 @@
+import { useState } from "react";
+
+const initialBoxes = [
+  { id: 1, name: "BOX 1", cycles: 19 },
+  { id: 2, name: "BOX 2", cycles: 19 },
+  { id: 3, name: "BOX 3", cycles: 20 },
+  { id: 4, name: "BOX 4", cycles: 20 },
+  { id: 5, name: "BOX 5", cycles: 70 },
+  { id: 6, name: "BOX 6", cycles: 70 },
+  { id: 7, name: "BOX 7", cycles: 70 },
+  { id: 8, name: "BOX 8", cycles: 70 },
+  { id: 9, name: "BOX 9", cycles: 70 },
+  { id: 10, name: "BOX 10", cycles: 70 },
+  { id: 11, name: "BOX 11", cycles: 69 },
+  { id: 12, name: "BOX 12", cycles: 69 },
+  { id: 13, name: "BOX 13", cycles: 69 },
+  { id: 14, name: "BOX 14", cycles: 69 },
+];
+
+export default function ColdBoxInventory() {
+  const [boxes, setBoxes] = useState(initialBoxes);
+
+  const incrementCycle = (id) => {
+    setBoxes((prevBoxes) =>
+      prevBoxes.map((box) =>
+        box.id === id && box.cycles < 70
+          ? { ...box, cycles: box.cycles + 1 }
+          : box
+      )
+    );
+  };
+
+  const getCycleColor = (cycles) => {
+    if (cycles >= 70) return "bg-red-500 text-white";
+    if (cycles >= 60) return "bg-yellow-300";
+    return "bg-green-200";
+  };
+
+  return (
+    <div className="p-4 max-w-4xl mx-auto">
+      <h1 className="text-2xl font-bold mb-4">Cold Box Cycle Tracker</h1>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        {boxes.map((box) => (
+          <div
+            key={box.id}
+            className={`p-4 rounded shadow cursor-pointer ${getCycleColor(
+              box.cycles
+            )}`}
+            onClick={() => incrementCycle(box.id)}
+          >
+            <h2 className="font-bold">{box.name}</h2>
+            <p>Cycles: {box.cycles}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
