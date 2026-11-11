@@ -41,22 +41,22 @@ code {
 }
 
 .continue {
-     text-shadow: 0 0 0.5px rgb(7, 7, 7); justify-content: center; gap: 20px; padding: 10px; margin: 0px ; color:rgb(56, 71, 212);
+     text-shadow: 0 0 0.5px rgb(7, 7, 7); justify-content: center; align-items: center; color:rgb(56, 71, 212);
 }
 
 .continue:hover {
     cursor: url('../images/cursor.png') 0 0, auto;
-    transition: 0.3s ease; text-decoration: underline; color: #e6b208;  justify-content: center; align-items: center;
+    transition: 0.3s ease;  color: #e6b208;  justify-content: center; align-items: center;  
 }
 
 #jumpscare-link:hover {
     cursor: url('../images/cursor.png') 0 0, auto;
-    transition: 0.3s ease; text-decoration: underline; color: #e6b208;  justify-content: center; align-items: center;
+    transition: 0.3s ease;   color: #e6b208;  justify-content: center; align-items: center;
 }
 
 .link:hover { 
     cursor: url('../images/cursor.png') 0 0, auto;
-    transition: 0.3s ease; text-decoration: underline; color: #e6b208;  justify-content: center; align-items: center;
+    transition: 0.3s ease;   color: #e6b208;  justify-content: center; align-items: center;
 }
 
 #jumpscare-link {
